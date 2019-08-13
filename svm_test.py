@@ -12,7 +12,8 @@ numbers = datasets.load_digits()
 # 
 # =============================================================================
 
-#调参
+#调参，gamma较小时离超平面越远的影响更大，gamma较大时离越近影响越大
+#C是指惩罚力度
 black_box=svm.SVC(gamma=0.001,C=100)
 
 #print(len(numbers.data))
