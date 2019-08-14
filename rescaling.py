@@ -134,5 +134,6 @@ stddevs_list=calculate_stddev(dataset,means_list)
 standerdization_data(dataset,means_list,stddevs_list)
 print(dataset)
     
+#1.logarithm(exponential transformation)
     
-
+#2.power transformation,box-cox方法修正有偏
