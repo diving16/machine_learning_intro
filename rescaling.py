@@ -1,6 +1,6 @@
 #自己写函数找到最大值最小值
 
-dataset=[[1,2],[3,4]]
+dataset=[[1,2,3],[3,4,9],[7,8,8],[5,6,4]]
 
 # =============================================================================
 # def find_max_min():
@@ -20,7 +20,7 @@ def find_max_min(dataset):
     return max_min
 
 max_min=find_max_min(dataset)
-print(max_min)
+#print(max_min)
         
     
 # =============================================================================
@@ -40,3 +40,18 @@ print(max_min)
 # print(find_max_min(dataset))
 # 
 # =============================================================================
+
+#不是函数里面调用函数，而是函数里面直接传入得到的函数值
+def max_min_normalization(dataset,max_min):
+    for row in dataset:
+        for i in range(len(dataset[0])):
+            row[i]=(row[i]-max_min[i][1])/(max_min[i][0]-max_min[i][1])
+            
+    
+max_min_normalization(dataset,max_min)
+print(dataset)
+
+
+
+
+
